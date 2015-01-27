@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+	<title>My laundry website</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<style>
+	  body {
+	  	font-family: helvetica;
+	  	margin: 0 auto;
+	  	max-width: 600px;
+	  	background-color: #232323;
+
+	  }
+
+	  h1 {
+	  	font-family: 'Shadows Into Light', cursive;
+	  	font-size: 75px;
+	  	text-align: center;
+	  	margin: 60px 0 0 0;
+	  	color: #aaaaaa;
+	  }
+
+	  h2 {
+	  	text-align: center;
+	  	margin: 0 0 70px 0;
+	  	color: #bbbbbb;
+	  }
+
+	  div {
+	  	height: 200px;
+	  	background-size: 50%;
+	  	position: relative;
+	  	margin:40px 0 0 0;
+	  	border-radius: 12px;
+	  }
+
+	  p {
+	  	color: rgba(255,255,255,1);
+	  	background-color: rgba(0,0,0,1);
+	  	padding: 10px;
+	  	text-align: justify;
+	  	line-height: 28px;
+	  	position: absolute;
+	  	bottom: 0;
+	  	margin: 0;
+	  	background: linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));
+	  	background: -webkit-linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));
+	  	background: -moz-linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));
+	  	height: 30px;
+	  	transition: height .5s;
+	  	-webkit-transition: height .5s;
+	  	-moz-transition: height .5s;
+
+
+	  }
+
+	  small {
+	  	opacity: 0;
+	  }
+
+	  .show-description p {
+	  	height: 150px;
+	  }
+
+	  .show-description small {
+	  	opacity: 1;
+	  }
+
+	  .first {
+	  	background-image: url("http://i.imgur.com/Y4y8qMW.jpg");
+
+	  }
+
+	  .second {
+	  	background-image: url("http://i.imgur.com/T6lnu4e.jpg");
+	  	background-size: cover;
+	  }
+
+	  .third {
+	  	background-image: url("http://i.imgur.com/L3LlLbb.jpg");
+	  	background-size: 300px;
+	  }
+
+	  .change {
+	  	float: right;
+	  }
+
+	  @media(max-width: 500px){
+	  	h1 {
+	  		font-size: 50px;
+	  		margin-top: 20px;
+	  		line-height: 40px;
+	  	}
+
+	  	h2 {
+	  		font-size: 20px;
+	  		margin: 20px 0 30px 0;
+	  	}
+
+	  	div {
+	  		margin: 10px 12px 0 12px;
+	  	}
+
+	  	p {
+	  		font-size: 20px;
+	  		line-height: 20px;
+	  	}
+
+	  	small {
+	  		font-size: 16px;
+	  	}
+	  }
+	</style>
+</head>
+<body>
+  <h1>Blessing's Laundry</h1>
+  <h2>Expect the Best Service Ever</h2>
+
+	<div class="first">
+	 <p>Washing of Clothes <span class="change">Convenient</span><br/>
+	  <small>In this laundry, we offer the best service ever to our customers in any location. We are efficient and capable in taking care of your laundry.</small></p>
+	</div>
+
+	<div class="second">
+	 <p>Our Portfolio<span class="change"> Accurate</span><br />
+	  <small>We have worked with so many customers from the office of the presidency, governors, governors wife and even senators. Also we have open outlets in the 36 states of the country.</small></p>
+	</div>
+
+	<div class="third">
+	 <p>Contacts <span class="change">Reachable</span><br/>
+	  <small>You can reach us through our website. And also you counld like us on facebook, follow us on twitter and instagram and also watch us on you tube.</small></p>
+	</div>
+
+	<script>
+	  $("div").on("click", function() {
+	  	$(this).toggleClass("show-description");
+	 });
+
+	</script>
+
+
+</body>
